@@ -2,6 +2,7 @@ package com.confag.confagapp.controller;
 
 import com.confag.confagapp.model.Session;
 import com.confag.confagapp.repository.SessionRepository;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -38,8 +39,19 @@ public class SessionController {
     @RequestMapping(value = "/{session_id}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.OK)
     public void delete(@PathVariable long session_id){
+
+        //TODO: delete children records as well
          sessionRepository.deleteById(session_id);
     }
+
+    @RequestMapping(value = "/{session_id}", method = RequestMethod.PUT)
+    public Session update(@PathVariable long session_id, @RequestBody Session session) {
+        //TODO: Add validation to check non of the values in the request body is null and if null throw  400 bad request to the client
+        Session sessionFromDB = sessionRepository.getOne(session_id);
+        BeanUtils.copyProperties(session, sessionFromDB);
+        return sessionRepository.saveAndFlush(sessionFromDB);
+    }
+
 
 
 
