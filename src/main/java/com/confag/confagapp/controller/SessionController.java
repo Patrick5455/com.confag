@@ -16,10 +16,9 @@ public class SessionController {
     @Autowired
     private SessionRepository sessionRepository;
 
-
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
-    public List<Session> getSessions(){
+    public List<Session> getAllSessions(){
         return sessionRepository.findAll();
     }
 
