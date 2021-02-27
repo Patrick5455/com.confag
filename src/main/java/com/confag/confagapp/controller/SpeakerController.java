@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController("/api/v1/speakers")
+@RestController
+@RequestMapping("/api/v1/speakers")
 public class SpeakerController {
 
     @Autowired
@@ -39,7 +40,7 @@ public class SpeakerController {
     public Speaker update(@PathVariable long speaker_id, @RequestBody Speaker speaker) {
         //TODO: Add validation to check non of the values in the request body is null and if null throw  400 bad request to the client
         Speaker speakerFromDB = speakerRepository.getOne(speaker_id);
-        BeanUtils.copyProperties(speaker, speakerFromDB);
+        BeanUtils.copyProperties(speaker, speakerFromDB, "speaker_id");
         return speakerRepository.saveAndFlush(speakerFromDB);
     }
 
