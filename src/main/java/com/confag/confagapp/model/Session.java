@@ -1,5 +1,6 @@
 package com.confag.confagapp.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import org.hibernate.annotations.Cascade;
 
@@ -8,6 +9,7 @@ import java.util.List;
 
 @Data
 @Entity(name = "sessions")
+@JsonIgnoreProperties(value = {"hibernateLazyInitializer", "handler"}) // handles the error from ByteBuddyInterceptor
 public class Session {
 
     @Id
