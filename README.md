@@ -1,1 +1,1 @@
-Conference Organizer App - MVC & REST
+### Conference Organizer App - A REST Application
