@@ -1,6 +1,7 @@
 package com.confag.confagapp.model;
 
 import lombok.Data;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.List;
@@ -16,6 +17,7 @@ public class Session {
     private String session_description;
     private Integer session_length;
 
+    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
     @ManyToMany
     @JoinTable(
             name = "session_speakers",

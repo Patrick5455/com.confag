@@ -1,6 +1,7 @@
 package com.confag.confagapp.model;
 
 import lombok.Data;
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
@@ -26,6 +27,7 @@ public class Speaker {
     private byte[] speaker_photo;
 
 
+    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
     @ManyToMany(mappedBy = "speakers")
     private List<Session> sessions;
 
