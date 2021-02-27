@@ -2,6 +2,7 @@ package com.confag.confagapp.controller;
 
 import com.confag.confagapp.model.Speaker;
 import com.confag.confagapp.repository.SpeakerRepository;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -33,6 +34,14 @@ public class SpeakerController {
         return speakerRepository.getOne(speaker_id);
     }
 
+    @RequestMapping(value = "/{speaker_id}", method = RequestMethod.PUT)
+    @ResponseStatus(HttpStatus.CREATED)
+    public Speaker update(@PathVariable long speaker_id, @RequestBody Speaker speaker) {
+        //TODO: Add validation to check non of the values in the request body is null and if null throw  400 bad request to the client
+        Speaker speakerFromDB = speakerRepository.getOne(speaker_id);
+        BeanUtils.copyProperties(speaker, speakerFromDB);
+        return speakerRepository.saveAndFlush(speakerFromDB);
+    }
 
 
 
