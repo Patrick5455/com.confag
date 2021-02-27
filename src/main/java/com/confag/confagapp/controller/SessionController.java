@@ -39,7 +39,6 @@ public class SessionController {
     @RequestMapping(value = "/{session_id}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.OK)
     public void delete(@PathVariable long session_id){
-
         //TODO: delete children records as well
          sessionRepository.deleteById(session_id);
     }

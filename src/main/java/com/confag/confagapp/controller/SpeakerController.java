@@ -43,6 +43,13 @@ public class SpeakerController {
         return speakerRepository.saveAndFlush(speakerFromDB);
     }
 
+    @RequestMapping(value = "/{speaker_id}", method = RequestMethod.DELETE)
+    @ResponseStatus(HttpStatus.OK)
+    public void delete(@PathVariable long speaker_id){
+        //TODO: delete children records as well
+        speakerRepository.deleteById(speaker_id);
+    }
+
 
 
 }
