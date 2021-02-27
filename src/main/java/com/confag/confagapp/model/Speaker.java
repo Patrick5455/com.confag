@@ -1,5 +1,6 @@
 package com.confag.confagapp.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.Type;
@@ -28,6 +29,7 @@ public class Speaker {
 
 
     @Cascade(org.hibernate.annotations.CascadeType.DELETE)
+    @JsonIgnore //to avoid cyclic serialization
     @ManyToMany(mappedBy = "speakers")
     private List<Session> sessions;
 
