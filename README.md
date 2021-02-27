@@ -5,7 +5,7 @@
 > TODO: About Project
 
 #### Published API Documentation (WIP)
-(https://documenter.getpostman.com/view/13065084/TWDdhskt)[Confag App APIs]
+[Confag App APIs](https://documenter.getpostman.com/view/13065084/TWDdhskt)
 
 ## Project Setup
 
