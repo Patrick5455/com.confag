@@ -1,6 +1,7 @@
 package com.confag.confagapp.model;
 
 import lombok.Data;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.util.Collection;
@@ -20,6 +21,9 @@ public class Speaker {
     private String speaker_bio;
 
     //TODO: speaker_photo - a binary type data
+    @Lob // LARGE OBJECT
+    @Type(type = "org.hibernate.type.BinaryType" )
+    private byte[] speaker_photo;
 
 
     @ManyToMany(mappedBy = "speakers")
