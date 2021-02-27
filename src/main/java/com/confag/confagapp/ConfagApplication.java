@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ConfagappApplication {
+public class ConfagApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ConfagappApplication.class, args);
+        SpringApplication.run(ConfagApplication.class, args);
     }
 
 }
