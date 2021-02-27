@@ -2,10 +2,9 @@ package com.confag.confagapp.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Collection;
+import java.util.List;
 
 @Data
 @Entity(name = "speakers")
@@ -21,4 +20,12 @@ public class Speaker {
     private String speaker_bio;
 
     //TODO: speaker_photo - a binary type data
+
+
+    @ManyToMany(mappedBy = "speakers")
+    private List<Session> sessions;
+
+
+
+
 }
