@@ -3,6 +3,7 @@ VALUES ('P','Premium','Access to all conference events plus attend the workshop 
        ('S','Standard','Access to all conference keynotes,sessions,community open spaces and the exhibition hall',FALSE),
        ('C','Community','Access to keynotes,community open spaces and the exhibition hall',FALSE);
 
+);
 INSERT INTO pricing_categories (pricing_category_code,pricing_category_name,pricing_start_date,pricing_end_date)
 VALUES ('E','Early Bird','2019-12-01','2020-01-15'),
        ('R','Regular','2020-01-16','2020-03-20'),
