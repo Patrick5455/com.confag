@@ -36,7 +36,7 @@ public class SpeakerController {
     }
 
     @RequestMapping(value = "/{speaker_id}", method = RequestMethod.PUT)
-    @ResponseStatus(HttpStatus.CREATED)
+    @ResponseStatus(HttpStatus.OK)
     public Speaker update(@PathVariable long speaker_id, @RequestBody Speaker speaker) {
         //TODO: Add validation to check non of the values in the request body is null and if null throw  400 bad request to the client
         Speaker speakerFromDB = speakerRepository.getOne(speaker_id);

@@ -44,7 +44,7 @@ public class SessionController {
     }
 
     @RequestMapping(value = "/{session_id}", method = RequestMethod.PUT)
-    @ResponseStatus(HttpStatus.CREATED)
+    @ResponseStatus(HttpStatus.OK)
     public Session update(@PathVariable long session_id, @RequestBody Session session) {
         //TODO: Add validation to check non of the values in the request body is null and if null throw  400 bad request to the client
         Session sessionFromDB = sessionRepository.getOne(session_id);

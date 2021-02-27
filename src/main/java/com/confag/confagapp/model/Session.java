@@ -3,6 +3,7 @@ package com.confag.confagapp.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import org.hibernate.annotations.Cascade;
+import org.springframework.context.annotation.Lazy;
 
 import javax.persistence.*;
 import java.util.List;
