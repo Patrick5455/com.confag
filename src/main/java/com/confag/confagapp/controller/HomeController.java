@@ -19,7 +19,7 @@ public class HomeController {
     @GetMapping
     public Map<String, Object> getStatus(){
         Map<String, Object> appV  = new HashMap<String, Object>();
-        appV.put("app-version", appVersion);
+        appV.put("app-version", appVersion); //jackson auto-marshal this into json when this endpoint is hit
         return appV;
     }
 }
