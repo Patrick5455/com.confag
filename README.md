@@ -6,6 +6,8 @@
 
 #### Published API Documentation (WIP)
 [Confag App APIs](https://documenter.getpostman.com/view/13065084/TWDdhskt)
+- In the environment section, select confagAPP
+- In the Language section, select your preferred/implementation language/http framework to embed insisde your code
 
 ## Project Setup
 
