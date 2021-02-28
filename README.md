@@ -1,13 +1,26 @@
-# Conference Organizer App - A REST Application
+# Conference Organizer App (V 1.0.0) - A REST Application
 
 ### About
 
-> TODO: About Project
+This is a rest application to manage the organization of events such as seminars, lectures, and what have you. The application is a collection of APIs that has been [pusblished](https://documenter.getpostman.com/view/13065084/TWDdhskt) via postman and [deployed](https://confag-api.herokuapp.com/) on Heroku.
 
-#### Published API Documentation (WIP)
+The application was built using Springboot a Java Framework and  a dockerised Postgres for persistence of data. 
+It is currently in development and updates would be made when I have spare time. 
+
+As of now the available services inlclude:
+- CRUD for Speaker
+- CRUD for Sessions
+
+To check the latest version visit [https://confag-api.herokuapp.com/](https://confag-api.herokuapp.com/)
+
+#### Published API Documentation
 [Confag App APIs](https://documenter.getpostman.com/view/13065084/TWDdhskt)
-- In the environment section, select confagAPP
+- In the environment section, select confagAPP : you can use the heroku host url to make api calls if you are not running the project locally
 - In the Language section, select your preferred/implementation language/http framework to embed insisde your code
+
+#### Deployed API on Heroku
+[confag-api](https://confag-api.herokuapp.com/)
+
 
 ## Project Setup
 
