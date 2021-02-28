@@ -9,7 +9,7 @@
 - In the environment section, select confagAPP
 - In the Language section, select your preferred/implementation language/http framework to embed insisde your code
 
-### Deployed API on Heroku
+#### Deployed API on Heroku
 [confag-api](https://confag-api.herokuapp.com/)
 
 
