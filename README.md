@@ -14,7 +14,7 @@ To check the latest version visit [https://confag-api.herokuapp.com/](https://co
 
 #### Published API Documentation
 [Confag App APIs](https://documenter.getpostman.com/view/13065084/TWDdhskt)
-- In the environment section, select confagAPP
+- In the environment section, select confagAPP : you can use the heroku host url to make api calls if you are not running the project locally
 - In the Language section, select your preferred/implementation language/http framework to embed insisde your code
 
 #### Deployed API on Heroku
