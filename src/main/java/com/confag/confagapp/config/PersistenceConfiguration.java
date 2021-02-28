@@ -7,17 +7,19 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
+import java.util.Properties;
 
 @Configuration
 public class PersistenceConfiguration {
 
     private final String dataSourceUrl = System.getenv("DB_URL");
+    Properties properties = new Properties();
     private final String username = System.getenv("username");
     private final String password = System.getenv("password");
     @Bean //override jpa config of datasource
     public DataSource dataSource(){
 
-        val dataSourceBuilder =
+        DataSourceBuilder dataSourceBuilder =
                 DataSourceBuilder.create();
 
         dataSourceBuilder.url(dataSourceUrl);
