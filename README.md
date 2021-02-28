@@ -1,11 +1,12 @@
 # Conference Organizer App (V 1.0.0) - A REST Application
 
 ### About
-This is a rest application to manage organization of events such as seminars, lectures and what have you. 
-The application is a collection of apis that has been [pusblished](https://documenter.getpostman.com/view/13065084/TWDdhskt) via postman 
-and [deployed](https://confag-api.herokuapp.com/) on heroku. 
+
+This is a rest application to manage the organization of events such as seminars, lectures, and what have you. The application is a collection of APIs that has been [pusblished](https://documenter.getpostman.com/view/13065084/TWDdhskt) via postman and [deployed](https://confag-api.herokuapp.com/) on Heroku.
+
 The application was built using Springboot a Java Framework and  a dockerised Postgres for persistence of data. 
 It is currently in development and updates would be made when I have spare time. 
+
 As of now the available services inlclude:
 - CRUD for Speaker
 - CRUD for Sessions
