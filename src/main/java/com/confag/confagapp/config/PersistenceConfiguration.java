@@ -16,15 +16,15 @@ public class PersistenceConfiguration {
     Properties properties = new Properties();
     private final String username = System.getenv("username");
     private final String password = System.getenv("password");
-    @Bean //override jpa config of datasource
-    public DataSource dataSource(){
-
-        DataSourceBuilder dataSourceBuilder =
-                DataSourceBuilder.create();
-
-        dataSourceBuilder.url(dataSourceUrl);
-        dataSourceBuilder.username(username);
-        dataSourceBuilder.password(password);
-        return dataSourceBuilder.build();
-    }
+//    @Bean //override jpa config of datasource
+//    public DataSource dataSource(){
+//
+//        DataSourceBuilder dataSourceBuilder =
+//                DataSourceBuilder.create();
+//
+//        dataSourceBuilder.url(dataSourceUrl);
+//        dataSourceBuilder.username(username);
+//        dataSourceBuilder.password(password);
+//        return dataSourceBuilder.build();
+//    }
 }
