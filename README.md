@@ -4,10 +4,14 @@
 
 > TODO: About Project
 
-#### Published API Documentation (WIP)
+#### Published API Documentation
 [Confag App APIs](https://documenter.getpostman.com/view/13065084/TWDdhskt)
 - In the environment section, select confagAPP
 - In the Language section, select your preferred/implementation language/http framework to embed insisde your code
+
+### Deployed API on Heroku
+[confag-api](https://confag-api.herokuapp.com/)
+
 
 ## Project Setup
 
